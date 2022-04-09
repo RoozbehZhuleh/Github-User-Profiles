@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Github Profiles</title>
+  <script src="./script/script.js" defer></script>
+  <script type="text/javascript" src="./script/toastify.js" defer></script>
+  <link rel="stylesheet" href="./githubprofiles.css">
+  <link rel="stylesheet" href="./styles/toastify.css">
+</head>
+
+<body>
+  <header>
+    <section class="search-section">
+      <div class="container">
+        <div class="header__wrapper">
+          <h1 id="project__title">Github Profiles </h1>
+          <div class="form__wrapper">
+                <input type="text" class="searchbar" id="username" name="username" placeholder="Enter Username">
+                <button type="button" class="btn btn__primary" id="btn-search">Search</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+
+  <main>
+
+    <section id="hero">
+      <div class="container">
+        <div class="card__wrapper">
+          <div class="img__wrapper">
+            <img src="" id="avatar" alt="user avatar">
+          </div>
+          <div class="text__wrapper">
+
+            <div class="text__item--left">
+              <div class="name">
+                <h2 id="real-name"></h2>
+                <p id="hire"></p>
+              </div>
+              <div class="twitter__wrapper">
+                <p id="twitter"></p>
+              </div>
+              <div class="follow__wrapper">
+                <div id="followers"></div>
+                <div id="following"></div>
+              </div>
+            </div>
+
+            <div class="text__item--right">
+              <div class="biography">
+                <p id="git-bio"></p>
+              </div>
+            </div>
+            
+            
+          </div>
+          
+        </div>
+          
+    </section>
+  </main>
+
+  
+</body>
+
+</html>
