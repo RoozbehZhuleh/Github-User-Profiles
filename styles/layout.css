@@ -8,17 +8,15 @@
 }
 
 :root {
-  --primary-color: #170322;
-  --dark-color: #07050e;
-  --accent-color: rgb(110, 64, 219);
+  --primary-color: #252525;
+  --dark-color: #000000;
+  --accent-color: rgb(31, 19, 91);
   --navbar-btn-color: rgba(52, 52, 68);
   --light-color: #f3f3f3;
   --font-accent-color: #808080;
-  --card-background-color: rgb(76, 70, 87);
+  --card-background-color: rgba(59, 59, 59, 0.668);
   --secondary-background-color: rgb(49, 37, 71);
   --light-font-color: #f3f3f3;
-  --login-primary-background-color: rgba(25, 20, 65%);
-  --login-secondary-background-color: rgba(17, 17, 19, 50%);
   --font-xs:1.2rem;
   --font-s: 1.5rem;
   --font-m: 2rem;

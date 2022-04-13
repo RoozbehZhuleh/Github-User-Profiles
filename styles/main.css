@@ -16,6 +16,7 @@
     background-color: var(--card-background-color);
     padding: 1rem;
     border-radius: 2rem;
+    box-shadow: 0.2rem 0.1rem 1rem var(--light-color);
 
 }
 
@@ -94,8 +95,9 @@
     padding: 0.5rem 1rem;
     border-radius:2rem;
     box-shadow: 0.1rem 0.1rem 1rem var(--primary-color);
-    background-color: var(--accent-color);
+    background-color: var(--light-color);
     text-align: center;
+    color: var(--font-accent-color);
 }
 
 .searchbar{
