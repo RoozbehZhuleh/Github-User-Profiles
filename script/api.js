@@ -10,6 +10,8 @@ let followerNumber = document.querySelector("#followers");
 let followingNumber = document.querySelector("#following");
 let gitBio = document.querySelector("#git-bio");
 let hero = document.querySelector("#hero");
+let header = document.querySelector("header");
+
 
 btnSearch.addEventListener("click", getData);
 
@@ -29,7 +31,9 @@ function getData() {
 
       else {
         render(data);
-        hero.style.display = "block";
+        // hero.style.display = "block";
+        changeHeaderStyle();
+        
       }
     })
 
