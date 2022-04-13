@@ -3,6 +3,7 @@
     position: fixed;
     left: 60%;
     transform: translateX(-50%);
+    display: none;
 }
 
 
@@ -94,5 +95,9 @@
     border-radius:2rem;
     box-shadow: 0.1rem 0.1rem 1rem var(--primary-color);
     background-color: var(--accent-color);
+    text-align: center;
+}
+
+.searchbar{
     text-align: center;
 }

@@ -9,11 +9,13 @@ let twitterHandle = document.querySelector("#twitter");
 let followerNumber = document.querySelector("#followers");
 let followingNumber = document.querySelector("#following");
 let gitBio = document.querySelector("#git-bio");
+let hero = document.querySelector("#hero");
 
 btnSearch.addEventListener("click", getData);
 
 
 function getData() {
+   
     let searchTerm = inputSearch.value;
     fetch(API_URL + searchTerm, { method: "GET"})
     .then (function (response) {
@@ -27,7 +29,7 @@ function getData() {
 
       else {
         render(data);
-
+        hero.style.display = "block";
       }
     })
 
