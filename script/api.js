@@ -11,7 +11,8 @@ let followingNumber = document.querySelector("#following");
 let gitBio = document.querySelector("#git-bio");
 let hero = document.querySelector("#hero");
 let header = document.querySelector("header");
-
+let linkToRep = document.querySelector("#link-to-repo");
+let locationBox = document.querySelector("#location");
 
 btnSearch.addEventListener("click", getData);
 
@@ -33,20 +34,42 @@ function getData() {
         render(data);
         // hero.style.display = "block";
         changeHeaderStyle();
+        removeBodyBackground();
+        addGithubLogo();
+        myInterval;
+        myInterval2;
         
+
       }
     })
 
 
 
   function render(data) {
-    const {avatar_url , hireable, following, followers, location, name, twitter_username, public_repos, bio} = data;
+    const {avatar_url , hireable, following, followers, location, name, twitter_username, public_repos, bio, html_url} = data;
     console.log(data);
     realName.textContent = data.name;
     imgAvatar.src = data.avatar_url;
     isHireable = data.hireable;
     followerNumber.innerHTML =`${data.followers} followers`;
-    followingNumber.innerHTML = `${data.following} following`;
+    followingNumber.innerHTML = `${data.following} 
+    following`;
+    linkToRep.href = data.html_url;
+
+
+    if(data.public_repos){
+      linkToRep.textContent = `click here to see all ${data.public_repos} available repos`;
+      linkToRep.style.cursor = "pointer";
+      linkToRep.target = "__blank";
+    }
+    else{
+      linkToRep.textContent = `This user doesn't have any repositories.`;
+      linkToRep.style.cursor = "default";
+    }
+
+
+
+    
     
     if(bio == null){
       gitBio.innerHTML = "No bio!";
@@ -64,6 +87,19 @@ function getData() {
       twitterHandle.textContent = `@${twitter_username}`;
     }
 
+
+    if(isHireable){
+      hire.innerHTML = `<p>Looking for a job!</p> <i class="fa-solid fa-check"></i>`;
+    }
+
+    else{ 
+      hire.innerHTML = `<p>Not looking for a job</p> <i class="fa-solid fa-x"></i>`;
+    }
+
+    if(data.location){
+      locationBox.innerHTML = `<i class="fa-solid fa-location-dot"></i> <p>${data.location}</p>`
+    }
+    
 } 
 };
 

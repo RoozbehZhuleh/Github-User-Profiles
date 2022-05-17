@@ -7,10 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Github Profiles</title>
   <script src="./script/api.js" defer></script>
-  <script src="./script/style.js"></script>
+  <script src="./script/style.js" defer></script>
   <script type="text/javascript" src="./script/toastify.js" defer></script>
   <link rel="stylesheet" href="./styles/toastify.css">
   <link rel="stylesheet" href="./githubprofiles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -18,7 +19,7 @@
     <section class="search-section">
       <div class="container">
         <div class="header__wrapper">
-          <h1 id="project__title">Github Profiles </h1>
+          <h1 id="project__title">Enter Username </h1>
           <div class="form__wrapper">
                 <input type="text" class="searchbar" id="username" name="username" placeholder="Enter Username">
                 <button type="button" class="btn btn__primary" id="btn-search">Search</button>
@@ -42,7 +43,7 @@
             <div class="text__item--left">
               <div class="name">
                 <h2 id="real-name"></h2>
-                <p id="hire"></p>
+                <div id="location"></div>
               </div>
               <div class="twitter__wrapper">
                 <p id="twitter"></p>
@@ -50,6 +51,10 @@
               <div class="follow__wrapper">
                 <div id="followers"></div>
                 <div id="following"></div>
+              </div>
+              <div class="hire">
+                <div id="hire">
+                </div>
               </div>
             </div>
 
@@ -63,9 +68,16 @@
           </div>
           
         </div>
-          
+        <div class="link-to-repo">
+          <a href="" id="link-to-repo"></a>
+        </div>
+      </div>  
     </section>
   </main>
+
+  <section class="github-logo">
+    <img id="github-logo" src="./assets/GitHub_Logo_White.png" alt="github logo">
+  </section>
 
   
 </body>

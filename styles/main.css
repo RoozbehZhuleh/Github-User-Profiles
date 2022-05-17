@@ -1,36 +1,44 @@
 #hero{
-    width: 100%;
+    /* width: 100%; */
     position: fixed;
-    left: 60%;
+    left: 50%;
     transform: translateX(-50%);
     display: none;
+    padding: 5rem 0 0 0;
+    z-index: 5;
 }
 
 
 .card__wrapper{
     display: flex;
-    width: 80%;
-    height: 100%;
-    justify-content:space-between;
+    justify-content:flex-start;
     align-items:center;
-    background-color: var(--card-background-color);
-    padding: 1rem;
+    gap: 5rem;
+    padding: 2rem;
     border-radius: 2rem;
-    box-shadow: 0.2rem 0.1rem 1rem var(--light-color);
+    background: rgba( 0, 0, 0, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 2px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    z-index: 5;
 
 }
 
 
-.img__wrapper{
+/* .img__wrapper{
     width: 25%;
     height: 100%;
     display: flex;
     justify-content:center;
     align-items:center;
-}
+} */
+
+
 #avatar{
-    width: 95%;
-    height: 95%;
+    width: 30rem;
+    /* height: 95%; */
     border-radius: 100%;
     border: 1px solid var(--accent-color);
 }
@@ -40,8 +48,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items:flex-start;
-    width: 70%;
-    height: 99%;
+    gap: 10rem;
+    width: 100%;
+    /* height: 99%; */
 }
 
 .text__item--left{
@@ -49,7 +58,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 30%;
+    /* width: 30%; */
+}
+
+.name{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
 }
 
 .follow__wrapper{
@@ -57,7 +73,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 99%;
+    /* width: 99%; */
     margin: 1rem 0 0 0;
     color: var(--font-accent-color);
     font-size: var(--font-xs);
@@ -68,26 +84,33 @@
     font-size: var(--font-xs)
 }
 
+.twitter__wrapper{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
 .git-bio-none{ 
-    color: var(--font-accent-color);
+    /* color: var(--font-accent-color);
     font-size: var(--font-xs);
-    width: 30%;
-    text-align: center;
+    text-align: center; */
+    display:none;
 }
 
 .git-bio{
     color: var(--font-primary-color);
     font-size: var(--font-s);
-    max-width: 90%;
+    /* max-width: 90%; */
     text-align: left;
 }
 
 .text__item--right{
-    width: 60%;
-    height: 100%;
+    /* width: 60%; */
+    /* height: 100%; */
 }
 .biography{
-    width: 100%;
+    width: 30vw;
 }
 #git-bio{
     font-size: var(--font-s);
@@ -102,4 +125,28 @@
 
 .searchbar{
     text-align: center;
+}
+
+#hire i{
+    color: white;
+}
+
+#location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+
+.github-logo{
+z-index: -5;
+}
+
+#github-logo{
+    animation: github 30s linear infinite;
+    width: 50rem;
+    z-index: -50;
+    display: none
 }

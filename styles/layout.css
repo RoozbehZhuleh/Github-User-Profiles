@@ -10,6 +10,7 @@
 :root {
   --primary-color: #252525;
   --dark-color: #000000;
+  --light-color: #FFFF;
   --accent-color: rgb(31, 19, 91);
   --navbar-btn-color: rgba(52, 52, 68);
   --light-color: #f3f3f3;
@@ -17,6 +18,7 @@
   --card-background-color: rgba(59, 59, 59, 0.668);
   --secondary-background-color: rgb(49, 37, 71);
   --light-font-color: #f3f3f3;
+  --dark-font-color: #000000;;
   --font-xs:1.2rem;
   --font-s: 1.5rem;
   --font-m: 2rem;
@@ -40,12 +42,16 @@ html {
 body {
   color: white;
   font-size: 1.5rem;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     var(--dark-color) 0%,
-    var(--primary-color) 75%
+    var(--primary-color) 75%} */
+    background-color: var(--dark-color);
+    background-image: url(../assets/GitHub_Logo_White2.png);
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    background-size: 50%;
     
-  );
 }
 
 button {
@@ -64,7 +70,8 @@ a {
 }
 
 .container {
-  width: 100%;
+  width: 1400px;
+  max-width: 90%;
   margin-right: auto;
   margin-left: auto;
 
@@ -135,3 +142,20 @@ a {
   font-family: inherit;
 }
 
+@keyframes github{
+  0% {
+    transform: translateX(-5vw) translateY(-20vh);
+  }
+  25% {
+    transform: translateX(68vw) translateY(10vh);
+  }
+  50% {
+    transform: translateX(-5vw) translateY(20vh);
+  }
+  75% {
+    transform: translateX(68vw) translateY(50vh);
+  }
+  100% {
+     transform: translateX(-5vw) translateY(-20vh);
+  }
+}
