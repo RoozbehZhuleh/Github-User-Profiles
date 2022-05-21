@@ -36,7 +36,7 @@ html {
   font-size: 62.5%;
   font-family: "montserrat", "Helvetica Neue", "Helvetica";
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -47,11 +47,11 @@ body {
     var(--dark-color) 0%,
     var(--primary-color) 75%} */
     background-color: var(--dark-color);
-    background-image: url(../assets/GitHub_Logo_White2.png);
+    background-image: url(../assets/GitHub_Logo_Black.png);
     background-repeat: no-repeat;
     background-position: 50% 20%;
     background-size: 50%;
-    
+    transition: all 0.2s ease;
 }
 
 button {
@@ -143,7 +143,24 @@ a {
 }
 
 @keyframes github{
-  0% {
+0% {
+    transform: translateX(-5vw) translateY(-20vh);
+  }
+  25% {
+    transform: translateX(68vw) translateY(10vh);
+  }
+  50% {
+    transform: translateX(-5vw) translateY(20vh);
+  }
+  75% {
+    transform: translateX(68vw) translateY(50vh);
+  }
+  100% {
+     transform: translateX(-5vw) translateY(-20vh);
+  }
+}
+@keyframes github{
+0% {
     transform: translateX(-5vw) translateY(-20vh);
   }
   25% {

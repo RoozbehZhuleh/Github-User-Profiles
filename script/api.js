@@ -18,27 +18,27 @@ btnSearch.addEventListener("click", getData);
 
 
 function getData() {
-   
-    let searchTerm = inputSearch.value;
-    fetch(API_URL + searchTerm, { method: "GET"})
-    .then (function (response) {
-        return response.json();
-    })
-    .then (function (data){
-      if (data.message==="Not Found") {
-        toasti("User not found!");
-        return;
-      }
-
-      else {
-        render(data);
-        // hero.style.display = "block";
-        changeHeaderStyle();
-        removeBodyBackground();
-        addGithubLogo();
-        myInterval;
-        myInterval2;
-        
+  
+  
+  
+  let searchTerm = inputSearch.value;
+  fetch(API_URL + searchTerm, { method: "GET"})
+  .then (function (response) {
+    return response.json();
+  })
+  .then (function (data){
+    if (data.message==="Not Found") {
+      toasti("User not found!");
+      return;
+    }
+    
+    else {
+      render(data);
+      changeHeaderStyle();
+      removeBodyBackground();
+      addGithubLogo();
+      myInterval;
+      myInterval2;        
 
       }
     })
